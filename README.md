@@ -1,1 +1,1 @@
-Lab1 PR: https://github.com/batoolmalkawii/snakes-cafe/pull/1
+Lab1 PR: https://github.com/batoolmalkawii/snakes-cafe/pull/2
