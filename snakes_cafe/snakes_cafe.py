@@ -43,12 +43,21 @@ def get_menu():
             print(item["name"])
         print("\n")
 
+def print_order():
+    print ("Your order:")
+    for type in menu:
+        for item in type["items"]:
+            if item["count"] > 0:
+                print (f'{item["count"]} {item["name"]}')
+
 def order_something():
     while True:
         item_exists = False
         order = input()
-        if order == "quit":
+        if order.lower() == "quit":
             sys.exit(0)
+        elif order.lower() == "summary":
+            print_order()
         else:
             for type in menu:
                 for item in type["items"]:
@@ -68,6 +77,7 @@ if __name__ == "__main__":
     print("**    Welcome to the Snakes Cafe!   **")
     print("**    Please see our menu below.    **")
     print("**")
+    print("** To view your oder, type \"summary\" **")
     print("** To quit at any time, type \"quit\" **")
     print("**************************************")
     print("\n")
